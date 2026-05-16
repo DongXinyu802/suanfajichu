@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的博客</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">我的主页</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="blog.html" class="active">博客</a></li>
+                <li><a href="index.html#about">关于</a></li>
+                <li><a href="index.html#contact">联系</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="blog-container">
+        <header class="blog-header">
+            <h1>我的博客</h1>
+            <p>记录技术学习与思考</p>
+        </header>
+
+        <div class="blog-posts">
+            <article class="blog-post">
+                <div class="post-image">
+                    <div class="placeholder-image">
+                        <span class="image-icon">📝</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <span class="post-category">前端开发</span>
+                    <h2><a href="#">深入理解 React Hooks</a></h2>
+                    <p class="post-excerpt">React Hooks 是 React 16.8 引入的一项重大特性，它让我们在不编写类组件的情况下也能使用状态管理和其他 React 特性...</p>
+                    <div class="post-meta">
+                        <span class="post-date">2024年1月15日</span>
+                        <span class="post-read-time">阅读时间: 8分钟</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="post-image">
+                    <div class="placeholder-image">
+                        <span class="image-icon">⚡</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <span class="post-category">性能优化</span>
+                    <h2><a href="#">Web 性能优化最佳实践</a></h2>
+                    <p class="post-excerpt">在当今快节奏的数字时代，网页性能直接影响用户体验和转化率。本文将介绍一些实用的性能优化技巧...</p>
+                    <div class="post-meta">
+                        <span class="post-date">2024年1月10日</span>
+                        <span class="post-read-time">阅读时间: 12分钟</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="post-image">
+                    <div class="placeholder-image">
+                        <span class="image-icon">☸️</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <span class="post-category">DevOps</span>
+                    <h2><a href="#">Kubernetes 入门指南</a></h2>
+                    <p class="post-excerpt">Kubernetes 已经成为容器编排的事实标准。本文将带你从零开始了解 Kubernetes 的基本概念和核心组件...</p>
+                    <div class="post-meta">
+                        <span class="post-date">2024年1月5日</span>
+                        <span class="post-read-time">阅读时间: 15分钟</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="post-image">
+                    <div class="placeholder-image">
+                        <span class="image-icon">🔐</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <span class="post-category">安全</span>
+                    <h2><a href="#">Web 应用安全防护策略</a></h2>
+                    <p class="post-excerpt">Web 应用面临着各种安全威胁，包括 XSS、CSRF、SQL 注入等。了解这些攻击方式并采取相应的防护措施至关重要...</p>
+                    <div class="post-meta">
+                        <span class="post-date">2023年12月28日</span>
+                        <span class="post-read-time">阅读时间: 10分钟</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="post-image">
+                    <div class="placeholder-image">
+                        <span class="image-icon">☕</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <span class="post-category">后端开发</span>
+                    <h2><a href="#">Java 虚拟机器制深度解析</a></h2>
+                    <p class="post-excerpt">JVM 是 Java 平台的核心组件，理解其工作原理对于编写高效的 Java 代码至关重要。本文将深入探讨 JVM 的内存模型和垃圾回收机制...</p>
+                    <div class="post-meta">
+                        <span class="post-date">2023年12月20日</span>
+                        <span class="post-read-time">阅读时间: 18分钟</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="post-image">
+                    <div class="placeholder-image">
+                        <span class="image-icon">📊</span>
+                    </div>
+                </div>
+                <div class="post-content">
+                    <span class="post-category">数据库</span>
+                    <h2><a href="#">PostgreSQL 查询优化技巧</a></h2>
+                    <p class="post-excerpt">数据库性能是应用性能的关键瓶颈之一。本文将介绍 PostgreSQL 中的索引优化、查询调优和性能监控方法...</p>
+                    <div class="post-meta">
+                        <span class="post-date">2023年12月15日</span>
+                        <span class="post-read-time">阅读时间: 11分钟</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <div class="pagination">
+            <button class="pagination-btn" disabled>上一页</button>
+            <span class="pagination-current">1</span>
+            <button class="pagination-btn">2</button>
+            <button class="pagination-btn">3</button>
+            <button class="pagination-btn">下一页</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 [你的名字]. 保留所有权利。</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+</body

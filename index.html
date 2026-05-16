@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">我的主页</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">首页</a></li>
+                <li><a href="blog.html">博客</a></li>
+                <li><a href="#about">关于</a></li>
+                <li><a href="#contact">联系</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>你好，我是 [你的名字]</h1>
+            <p class="hero-subtitle">全栈开发者 | 技术爱好者 | 终身学习者</p>
+            <div class="hero-buttons">
+                <a href="#about" class="btn btn-primary">了解更多</a>
+                <a href="blog.html" class="btn btn-secondary">查看博客</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="avatar">
+                <div class="avatar-inner">
+                    <span class="avatar-icon">👤</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>关于我</h2>
+            <div class="about-content">
+                <p>我是一名充满激情的全栈开发者，拥有多年的软件开发经验。我热爱探索新技术，致力于创造优雅而实用的解决方案。</p>
+                <p>在工作中，我专注于构建高性能、可扩展的 Web 应用程序。我相信技术可以改变世界，让生活变得更美好。</p>
+            </div>
+            <div class="skills">
+                <h3>技能</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <span class="skill-icon">💻</span>
+                        <h4>前端开发</h4>
+                        <p>React, Vue, TypeScript</p>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-icon">⚙️</span>
+                        <h4>后端开发</h4>
+                        <p>Node.js, Python, Go</p>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-icon">🗄️</span>
+                        <h4>数据库</h4>
+                        <p>PostgreSQL, MongoDB</p>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-icon">🚀</span>
+                        <h4>DevOps</h4>
+                        <p>Docker, Kubernetes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>联系我</h2>
+            <p class="contact-intro">如果您有任何问题或合作意向，欢迎随时联系我！</p>
+            <div class="contact-links">
+                <a href="mailto:your@email.com" class="contact-link">
+                    <span class="contact-icon">📧</span>
+                    <span>your@email.com</span>
+                </a>
+                <a href="https://github.com/yourusername" target="_blank" class="contact-link">
+                    <span class="contact-icon">🐙</span>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-link">
+                    <span class="contact-icon">💼</span>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 [你的名字]. 保留所有权利。</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
