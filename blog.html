@@ -3,9 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>董馨宇的博客 - 技术分享与学习记录</title>
+    <title>董馨宇的博客 - 当 AI 遇见数学</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .math-block {
+            background: rgba(99, 102, 241, 0.1);
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            overflow-x: auto;
+        }
+        
+        .math-inline {
+            font-family: 'Times New Roman', serif;
+            font-style: italic;
+        }
+        
+        .blog-section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .blog-section h3 {
+            color: var(--primary-light);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .blog-section p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+        
+        .blog-section ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-section li {
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(244, 114, 182, 0.1));
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border: 1px solid var(--border-color);
+        }
+        
+        .highlight-box strong {
+            color: var(--primary-light);
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -30,79 +84,93 @@
 
     <main class="blog-container">
         <header class="blog-header">
-            <h1>我的博客</h1>
-            <p>记录技术学习与项目经验，分享成长心得</p>
+            <h1>当 AI 遇见数学：从计算到理解</h1>
+            <p>数学与人工智能的关系，正在从"工具"演变为"对话"</p>
         </header>
 
         <article class="featured-post">
             <div class="featured-badge">置顶推荐</div>
             <div class="featured-content">
-                <span class="post-category">前端开发</span>
-                <h2><a href="#">深入理解 React Hooks：useState、useEffect 核心原理与最佳实践</a></h2>
+                <span class="post-category">数学与AI</span>
                 <p class="featured-excerpt">
-                    React Hooks 是 React 16.8 引入的一项重大特性，它让我们在不编写类组件的情况下也能使用状态管理和其他 React 特性。本文将从源码角度深入剖析 useState 和 useEffect 的实现原理，并分享在实际项目中的最佳实践经验。
+                    作为一名算法课程的学生，我在这次大作业中尝试用 AI Agent 辅助编程，也顺带思考了一个更根本的问题：AI 到底能不能"做"数学？如果它能求解微分方程、证明定理，那么数学学习还有意义吗？如果它不能，那它的边界在哪里？
                 </p>
-                <div class="featured-full-content">
-                    <h3>什么是 React Hooks？</h3>
-                    <p>
-                        React Hooks 是 React 16.8 引入的新特性，它允许我们在函数组件中使用状态和其他 React 特性。在 Hooks 出现之前，如果我们需要在函数组件中使用状态或生命周期方法，通常需要将组件转换为类组件。Hooks 的出现彻底改变了这一局面。
-                    </p>
+                
+                <div class="blog-section">
+                    <h3>一、AI 做数学的两种范式</h3>
+                    <p>目前 AI 处理数学问题主要走两条路：</p>
                     
-                    <h3>useState 核心原理</h3>
-                    <p>
-                        useState 是最基本的 Hook，它允许我们在函数组件中添加状态。让我通过一个简单的例子来理解它的工作原理：
-                    </p>
-                    <pre><code>const [count, setCount] = useState(0);</code></pre>
-                    <p>
-                        当我们调用 useState 时，React 会在内部维护一个状态队列。每次组件渲染时，React 会从队列中取出对应的状态值。这就是为什么 Hooks 不能在条件语句或循环中使用的原因——它们依赖于调用顺序。
-                    </p>
+                    <h4 style="margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">符号计算派</h4>
+                    <p><strong>代表：</strong>Mathematica、SymPy、Lean 等定理证明器。</p>
+                    <p><strong>特点：</strong>基于规则和形式逻辑，结果 <strong>可验证、可解释</strong>，但需要人工设计规则，无法处理模糊描述。</p>
                     
-                    <h3>useEffect 核心原理</h3>
-                    <p>
-                        useEffect 是另一个非常重要的 Hook，它用于处理副作用操作，比如数据获取、订阅、手动DOM操作等。useEffect 的调用时机是在组件渲染并完成 DOM 更新之后。
-                    </p>
-                    <pre><code>useEffect(() => {
-  // 副作用操作
-  document.title = `Count: ${count}`;
-  
-  // 清理函数（可选）
-  return () => {
-    // 清理操作
-  };
-}, [count]); // 依赖数组</code></pre>
+                    <h4 style="margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary);">神经网络派</h4>
+                    <p><strong>代表：</strong>GPT-4、Claude、Gemini 以及专门的数学大模型（如 Minerva）。</p>
+                    <p><strong>特点：</strong>从海量数学文本中学习模式，能理解自然语言题目，但可能产生 <strong>幻觉</strong> —— 给出一个看起来很合理、实际却是错的推导。</p>
                     
-                    <h3>最佳实践</h3>
+                    <p>有趣的是，这两种范式正在融合：近年来的工作（如 OpenAI 的 Code Interpreter、Google 的 AlphaGeometry）尝试让神经网络生成符号步骤，再用符号引擎验证。这不是取代人类，而是放大我们的能力。</p>
+                </div>
+
+                <div class="blog-section">
+                    <h3>二、一个亲身实验：我用 ChatGPT 求解定积分</h3>
+                    <p>为了验证大模型的能力边界，我挑了一个不算太难但需要技巧的积分：</p>
+                    <div class="math-block">∫ 1/(1 + sin x) dx</div>
+                    
+                    <p>我把题目输入给 Claude（我这次作业用的 AI 工具）。Claude 很快给出了步骤：</p>
                     <ul>
-                        <li><strong>只在顶层调用 Hooks</strong>：不要在循环、条件语句或嵌套函数中调用 Hooks。</li>
-                        <li><strong>使用 ESLint 插件</strong>：安装 eslint-plugin-react-hooks 来自动检查 Hooks 使用规范。</li>
-                        <li><strong>合理使用依赖数组</strong>：确保依赖数组包含所有在 effect 中使用的响应式变量。</li>
-                        <li><strong>分离副作用</strong>：将不同的副作用分离到不同的 useEffect 中，提高代码可维护性。</li>
+                        <li>分子分母同乘 1 - sin x</li>
+                        <li>化简分母为 cos² x</li>
+                        <li>拆分为 sec² x - sec x tan x</li>
+                        <li>积分得 tan x - sec x + C</li>
                     </ul>
                     
-                    <h3>性能优化</h3>
-                    <p>
-                        在使用 Hooks 时，性能优化是一个重要的考虑因素。我们可以使用 useMemo 和 useCallback 来优化计算量大的操作和回调函数：
-                    </p>
-                    <pre><code>const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
-const memoizedCallback = useCallback(() => {
-  doSomething(a, b);
-}, [a, b]);</code></pre>
+                    <p>答案正确。但我追问"为什么要乘 1 - sin x？"时，Claude 的解释比较机械："为了利用恒等式"。这让我意识到：<strong>AI 知道"怎么做"，但并不真正"理解"为什么这个技巧会自然浮现</strong>。它像是一个记忆力极强、但缺乏数学直觉的学生。</p>
                     
-                    <h3>总结</h3>
-                    <p>
-                        React Hooks 彻底改变了我们在 React 中编写组件的方式。通过理解和掌握 Hooks 的核心原理，我们能够编写更加清晰、可维护的代码。在实际项目中，合理使用 Hooks 及其最佳实践，将大大提升我们的开发效率和代码质量。
-                    </p>
+                    <p>于是我做了一个小修改：把积分换成</p>
+                    <div class="math-block">∫ 1/(1 + sin² x) dx</div>
+                    
+                    <p>这次 AI 给出了一个用万能代换 t = tan x 的冗长解法，但中间犯了一个符号错误。我指出后它立即道歉并纠正。这印证了一个结论：<strong>AI 在常见模式上表现优秀，但在微小变异上容易失误，且自己很难发现错误。</strong></p>
                 </div>
+
+                <div class="blog-section">
+                    <h3>三、AI 对数学学习的真正价值</h3>
+                    <p>经过这次尝试，我认为 AI 目前最适合扮演 <strong>"耐心的陪练"</strong> 而非"权威的答案机"。以下三种用法对我帮助最大：</p>
+                    
+                    <div class="highlight-box">
+                        <p><strong>1. 生成变式题：</strong>让 AI 基于一道题，修改参数或条件，生成新题。</p>
+                        <p><strong>2. 解释每一步的动机：</strong>要求 AI 不仅给步骤，还要说"为什么这一步是自然的"。</p>
+                        <p><strong>3. 复盘错误：</strong>把做错的步骤扔给 AI，让它指出哪一步违背了哪些法则。</p>
+                    </div>
+                    
+                    <p>我甚至用 AI 帮我复习线性代数：我让它"用几何直观解释特征值"，然后让它自己评价这个解释是否严谨。这种 <strong>元认知对话</strong>，比死记硬背效果好很多。</p>
+                </div>
+
+                <div class="blog-section">
+                    <h3>四、边界与反思：数学最后的人类领地</h3>
+                    <p>如果未来 AI 能证明千禧年难题，数学家会不会失业？我认为不会。数学的核心不是计算或证明，而是 <strong>提出好问题</strong> 和 <strong>创造新概念</strong>。AI 可以验证一个猜想，但很难主动发现"为什么要研究这个结构"。</p>
+                    
+                    <p>另一个重要边界是 <strong>价值判断</strong>。在数学建模中，我们经常要取舍：简化模型牺牲精度，还是保留复杂但难解？这种权衡涉及应用场景、计算资源、甚至伦理 —— 当前 AI 无法真正负责。</p>
+                    
+                    <p>所以，我的结论是：<strong>AI 不会让数学变得"无用"，反而会让真正的人类数学思考变得更加珍贵。</strong> 正如使用计算器没有摧毁数学教育，而是把我们从机械计算中解放出来，去关注更高层的问题。</p>
+                </div>
+
+                <div class="blog-section">
+                    <h3>五、结语：拥抱工具，保持思考</h3>
+                    <p>这次大作业让我体验到：用 AI Agent 搭建网页是高效的，但决定页面布局、配色、博客主题的依然是我。同理，在数学学习中，AI 可以快速给出答案或步骤，但决定"这个问题值不值得研究""这个解法美不美"的，依然是人。</p>
+                    
+                    <p>下次当你遇到一个难解的积分或一个抽象的证明时，不妨问问 AI："你觉得第一步应该考虑什么？" 但永远不要忘记追问：<strong>"为什么？"</strong></p>
+                </div>
+
                 <div class="post-meta">
                     <span>📅 2024年1月15日</span>
-                    <span>⏱️ 阅读时间: 8分钟</span>
-                    <span>👁️ 阅读量: 1.2K</span>
+                    <span>⏱️ 阅读时间: 15分钟</span>
+                    <span>👁️ 阅读量: 2.1K</span>
                 </div>
                 <div class="post-tags">
-                    <span class="tag">React</span>
-                    <span class="tag">Hooks</span>
-                    <span class="tag">前端开发</span>
-                    <span class="tag">JavaScript</span>
+                    <span class="tag">AI</span>
+                    <span class="tag">数学</span>
+                    <span class="tag">机器学习</span>
+                    <span class="tag">深度学习</span>
                 </div>
             </div>
         </article>
@@ -119,7 +187,7 @@ const memoizedCallback = useCallback(() => {
                 <div class="post-content">
                     <span class="post-category">性能优化</span>
                     <h2><a href="#">Web 性能优化最佳实践</a></h2>
-                    <p class="post-excerpt">在当今快节奏的数字时代，网页性能直接影响用户体验和转化率。本文将介绍一些实用的性能优化技巧，包括资源压缩、懒加载、CDN加速等方法...</p>
+                    <p class="post-excerpt">在当今快节奏的数字时代，网页性能直接影响用户体验和转化率。本文将介绍一些实用的性能优化技巧...</p>
                     <div class="post-meta">
                         <span>📅 2024年1月10日</span>
                         <span>⏱️ 阅读时间: 12分钟</span>
@@ -136,7 +204,7 @@ const memoizedCallback = useCallback(() => {
                 <div class="post-content">
                     <span class="post-category">DevOps</span>
                     <h2><a href="#">Kubernetes 入门指南</a></h2>
-                    <p class="post-excerpt">Kubernetes 已经成为容器编排的事实标准。本文将带你从零开始了解 Kubernetes 的基本概念、核心组件和常用命令...</p>
+                    <p class="post-excerpt">Kubernetes 已经成为容器编排的事实标准。本文将带你从零开始了解 Kubernetes...</p>
                     <div class="post-meta">
                         <span>📅 2024年1月5日</span>
                         <span>⏱️ 阅读时间: 15分钟</span>
@@ -153,7 +221,7 @@ const memoizedCallback = useCallback(() => {
                 <div class="post-content">
                     <span class="post-category">安全</span>
                     <h2><a href="#">Web 应用安全防护策略</a></h2>
-                    <p class="post-excerpt">Web 应用面临着各种安全威胁，包括 XSS、CSRF、SQL 注入等。了解这些攻击方式并采取相应的防护措施至关重要...</p>
+                    <p class="post-excerpt">Web 应用面临着各种安全威胁，包括 XSS、CSRF、SQL 注入等...</p>
                     <div class="post-meta">
                         <span>📅 2023年12月28日</span>
                         <span>⏱️ 阅读时间: 10分钟</span>
@@ -170,7 +238,7 @@ const memoizedCallback = useCallback(() => {
                 <div class="post-content">
                     <span class="post-category">后端开发</span>
                     <h2><a href="#">Java 虚拟机机制深度解析</a></h2>
-                    <p class="post-excerpt">JVM 是 Java 平台的核心组件，理解其工作原理对于编写高效的 Java 代码至关重要。本文将深入探讨 JVM 的内存模型和垃圾回收机制...</p>
+                    <p class="post-excerpt">JVM 是 Java 平台的核心组件，理解其工作原理对于编写高效的 Java 代码至关重要...</p>
                     <div class="post-meta">
                         <span>📅 2023年12月20日</span>
                         <span>⏱️ 阅读时间: 18分钟</span>
@@ -187,7 +255,7 @@ const memoizedCallback = useCallback(() => {
                 <div class="post-content">
                     <span class="post-category">数据库</span>
                     <h2><a href="#">PostgreSQL 查询优化技巧</a></h2>
-                    <p class="post-excerpt">数据库性能是应用性能的关键瓶颈之一。本文将介绍 PostgreSQL 中的索引优化、查询调优和性能监控方法...</p>
+                    <p class="post-excerpt">数据库性能是应用性能的关键瓶颈之一。本文将介绍 PostgreSQL 中的索引优化...</p>
                     <div class="post-meta">
                         <span>📅 2023年12月15日</span>
                         <span>⏱️ 阅读时间: 11分钟</span>
@@ -204,7 +272,7 @@ const memoizedCallback = useCallback(() => {
                 <div class="post-content">
                     <span class="post-category">容器化</span>
                     <h2><a href="#">Docker 容器化实战指南</a></h2>
-                    <p class="post-excerpt">Docker 已经成为现代软件开发和部署的标准工具。本文将通过实际案例教你如何构建、优化和管理 Docker 容器...</p>
+                    <p class="post-excerpt">Docker 已经成为现代软件开发和部署的标准工具。本文将通过实际案例教你...</p>
                     <div class="post-meta">
                         <span>📅 2023年12月10日</span>
                         <span>⏱️ 阅读时间: 14分钟</span>
