@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人主页</title>
+    <title>董馨宇的个人主页</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -17,6 +17,7 @@
                 <li><a href="index.html" class="active">首页</a></li>
                 <li><a href="blog.html">博客</a></li>
                 <li><a href="#about">关于</a></li>
+                <li><a href="#projects">项目</a></li>
                 <li><a href="#contact">联系</a></li>
             </ul>
             <div class="hamburger">
@@ -29,8 +30,9 @@
 
     <header class="hero">
         <div class="hero-content">
-            <h1>你好，我是 [你的名字]</h1>
-            <p class="hero-subtitle">全栈开发者 | 技术爱好者 | 终身学习者</p>
+            <h1>你好，我是 董馨宇</h1>
+            <p class="hero-subtitle">计算与应用数学专业 | 技术爱好者</p>
+            <p class="hero-description">一名热爱技术、喜欢探索新事物的学生，致力于用代码创造价值。</p>
             <div class="hero-buttons">
                 <a href="#about" class="btn btn-primary">了解更多</a>
                 <a href="blog.html" class="btn btn-secondary">查看博客</a>
@@ -49,33 +51,161 @@
         <div class="container">
             <h2>关于我</h2>
             <div class="about-content">
-                <p>我是一名充满激情的全栈开发者，拥有多年的软件开发经验。我热爱探索新技术，致力于创造优雅而实用的解决方案。</p>
-                <p>在工作中，我专注于构建高性能、可扩展的 Web 应用程序。我相信技术可以改变世界，让生活变得更美好。</p>
+                <p>我是一名计算与应用数学专业的学生，对软件开发充满热情。在学习中，我注重理论与实践相结合，积极参与各类项目实践，不断提升自己的技术能力。</p>
+                <p>我热爱开源文化，喜欢阅读优秀项目的源码，从中学习先进的设计思想和编码规范。我相信技术的价值在于解决实际问题，让人们的生活变得更加便捷。</p>
+                <p>目前正在深入学习 Web 开发技术，希望未来能够在软件开发领域有所建树。</p>
             </div>
+            
+            <div class="interests">
+                <h3>学习方向与兴趣</h3>
+                <div class="interests-grid">
+                    <div class="interest-card">
+                        <span class="interest-icon">🎯</span>
+                        <h4>学习方向</h4>
+                        <ul class="interest-list">
+                            <li>Web 全栈开发</li>
+                            <li>前端工程化</li>
+                            <li>软件架构设计</li>
+                            <li>数据库系统</li>
+                        </ul>
+                    </div>
+                    <div class="interest-card">
+                        <span class="interest-icon">💡</span>
+                        <h4>技术兴趣</h4>
+                        <ul class="interest-list">
+                            <li>人工智能与机器学习</li>
+                            <li>云计算与容器技术</li>
+                            <li>区块链技术</li>
+                            <li>网络安全</li>
+                        </ul>
+                    </div>
+                    <div class="interest-card">
+                        <span class="interest-icon">🌟</span>
+                        <h4>其他兴趣</h4>
+                        <ul class="interest-list">
+                            <li>开源社区贡献</li>
+                            <li>技术博客写作</li>
+                            <li>新技术学习</li>
+                            <li>团队协作开发</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <div class="skills">
-                <h3>技能</h3>
+                <h3>技术技能</h3>
                 <div class="skills-grid">
                     <div class="skill-card">
                         <span class="skill-icon">💻</span>
                         <h4>前端开发</h4>
-                        <p>React, Vue, TypeScript</p>
+                        <p>HTML5, CSS3, JavaScript, React, Vue, TypeScript</p>
                     </div>
                     <div class="skill-card">
                         <span class="skill-icon">⚙️</span>
                         <h4>后端开发</h4>
-                        <p>Node.js, Python, Go</p>
+                        <p>Node.js, Python, Java, Go, RESTful API</p>
                     </div>
                     <div class="skill-card">
                         <span class="skill-icon">🗄️</span>
                         <h4>数据库</h4>
-                        <p>PostgreSQL, MongoDB</p>
+                        <p>MySQL, PostgreSQL, MongoDB, Redis</p>
                     </div>
                     <div class="skill-card">
                         <span class="skill-icon">🚀</span>
-                        <h4>DevOps</h4>
-                        <p>Docker, Kubernetes</p>
+                        <h4>工具与平台</h4>
+                        <p>Git, Docker, Linux, VS Code, GitHub</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>开源项目</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">📦</span>
+                        <h3>项目名称 1</h3>
+                    </div>
+                    <p class="project-description">这是一个基于 React 和 Node.js 的全栈项目，用于快速构建现代化 Web 应用。</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MongoDB</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">查看源码</a>
+                        <a href="#" class="project-link">在线演示</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">🛠️</span>
+                        <h3>项目名称 2</h3>
+                    </div>
+                    <p class="project-description">使用 Python 开发的自动化工具，用于简化日常开发工作流程。</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">CLI</span>
+                        <span class="tag">Automation</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">查看源码</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-icon">📱</span>
+                        <h3>项目名称 3</h3>
+                    </div>
+                    <p class="project-description">轻量级的跨平台移动应用，采用原生开发，性能优异。</p>
+                    <div class="project-tags">
+                        <span class="tag">Flutter</span>
+                        <span class="tag">Dart</span>
+                        <span class="tag">Mobile</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">查看源码</a>
+                        <a href="#" class="project-link">应用商店</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-preview">
+        <div class="container">
+            <h2>最新博客</h2>
+            <p class="blog-preview-intro">欢迎访问我的技术博客，记录学习心得与项目经验</p>
+            <div class="blog-preview-grid">
+                <article class="blog-preview-card">
+                    <span class="post-category">前端开发</span>
+                    <h3><a href="blog.html">深入理解 React Hooks</a></h3>
+                    <p class="post-excerpt">React Hooks 是 React 16.8 引入的一项重大特性，它让我们在不编写类组件的情况下也能使用状态管理和其他 React 特性...</p>
+                    <div class="post-meta">
+                        <span>2024年1月15日</span>
+                        <span>阅读时间: 8分钟</span>
+                    </div>
+                    <a href="blog.html" class="read-more">阅读全文 →</a>
+                </article>
+
+                <article class="blog-preview-card">
+                    <span class="post-category">性能优化</span>
+                    <h3><a href="blog.html">Web 性能优化最佳实践</a></h3>
+                    <p class="post-excerpt">在当今快节奏的数字时代，网页性能直接影响用户体验和转化率。本文将介绍一些实用的性能优化技巧...</p>
+                    <div class="post-meta">
+                        <span>2024年1月10日</span>
+                        <span>阅读时间: 12分钟</span>
+                    </div>
+                    <a href="blog.html" class="read-more">阅读全文 →</a>
+                </article>
+            </div>
+            <div class="blog-cta">
+                <a href="blog.html" class="btn btn-primary">查看更多博客文章</a>
             </div>
         </div>
     </section>
@@ -83,26 +213,19 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2>联系我</h2>
-            <p class="contact-intro">如果您有任何问题或合作意向，欢迎随时联系我！</p>
+            <p class="contact-intro">如果您有任何问题或合作意向，欢迎通过邮箱与我联系！</p>
             <div class="contact-links">
-                <a href="mailto:your@email.com" class="contact-link">
+                <a href="mailto:1793285939@qq.com" class="contact-link">
                     <span class="contact-icon">📧</span>
-                    <span>your@email.com</span>
-                </a>
-                <a href="https://github.com/yourusername" target="_blank" class="contact-link">
-                    <span class="contact-icon">🐙</span>
-                    <span>GitHub</span>
-                </a>
-                <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-link">
-                    <span class="contact-icon">💼</span>
-                    <span>LinkedIn</span>
+                    <span>1793285939@qq.com</span>
                 </a>
             </div>
         </div>
     </section>
 
     <footer class="footer">
-        <p>&copy; 2024 [你的名字]. 保留所有权利。</p>
+        <p>&copy; 2024 董馨宇. 保留所有权利。</p>
+        <p class="footer-note">Powered by HTML + CSS</p>
     </footer>
 
     <script>
@@ -112,6 +235,13 @@
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             hamburger.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
         });
     </script>
 </body>
